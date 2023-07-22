@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity(name = "Guest")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Guest {
+public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;

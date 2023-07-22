@@ -1,8 +1,6 @@
 package Rahim.faridKurs.service;
 
-import Rahim.faridKurs.dto.GuestRequest;
 import Rahim.faridKurs.dto.HotelRequest;
-import Rahim.faridKurs.entity.Guest;
 import Rahim.faridKurs.entity.Hotel;
 
 import java.util.List;

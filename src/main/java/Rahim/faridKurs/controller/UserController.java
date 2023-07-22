@@ -1,5 +1,5 @@
 package Rahim.faridKurs.controller;
 
-public class GuestController {
+public class UserController {
 
 }
