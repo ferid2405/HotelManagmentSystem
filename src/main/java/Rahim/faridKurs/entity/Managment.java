@@ -8,12 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "User")
-public class User {
+@Entity(name = "Managment")
+
+public class Managment {
     private Integer id;
     private String name;
-    private String surname;
-    private Integer roomNumber;
-    private String email;
-    private String password;
+    private String duty;
 }

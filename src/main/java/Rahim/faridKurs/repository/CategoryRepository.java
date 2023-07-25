@@ -1,4 +1,4 @@
 package Rahim.faridKurs.repository;
 
-public interface HotelRepository {
+public interface CategoryRepository {
 }
