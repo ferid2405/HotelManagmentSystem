@@ -3,6 +3,7 @@ package Rahim.faridKurs.service.impl;
 import Rahim.faridKurs.dto.HotelRequest;
 import Rahim.faridKurs.dto.mapper.HotelMapper;
 import Rahim.faridKurs.entity.Hotel;
+import Rahim.faridKurs.exception.HotelNotFound;
 import Rahim.faridKurs.repository.HotelRepository;
 import Rahim.faridKurs.service.HotelService;
 import lombok.RequiredArgsConstructor;
@@ -17,12 +18,13 @@ public class HotelImpl implements HotelService {
 
     @Override
     public List<Hotel> getAll() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public Hotel getById(Integer id) {
-        return null;
+        return repository.findById(id)
+                .orElseThrow(()->new HotelNotFound("Bele bir hotel tapilmadi"));
     }
 
     @Override
@@ -32,7 +34,7 @@ public class HotelImpl implements HotelService {
 
     @Override
     public void delete(Integer id) {
-
+        repository.deleteById(id);
     }
 
     @Override

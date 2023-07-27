@@ -2,6 +2,7 @@ package Rahim.faridKurs.service.impl;
 
 import Rahim.faridKurs.dto.UserRequest;
 import Rahim.faridKurs.entity.User;
+import Rahim.faridKurs.exception.UserNotFound;
 import Rahim.faridKurs.repository.UserRepository;
 import Rahim.faridKurs.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,12 +17,13 @@ public class UserImpl implements UserService {
 
     @Override
     public List<User> getAll() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public User getById(Integer id) {
-        return null;
+        return repository.findById(id)
+                .orElseThrow(()->new UserNotFound("Bele bir istifdeci yoxdur"));
     }
 
     @Override
@@ -31,7 +33,7 @@ public class UserImpl implements UserService {
 
     @Override
     public void delete(Integer id) {
-
+        repository.deleteById(id);
     }
 
     @Override
