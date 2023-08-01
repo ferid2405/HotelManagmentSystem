@@ -2,7 +2,7 @@ package Rahim.faridKurs.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record CategoryRequest(
+public record KabnetRequest(
         @NotBlank
         Integer roomCount,
         @NotBlank

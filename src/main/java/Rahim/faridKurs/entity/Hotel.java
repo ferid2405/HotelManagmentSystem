@@ -1,8 +1,6 @@
 package Rahim.faridKurs.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,14 +10,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity(name = "Hotel")
 public class Hotel {
+    @GeneratedValue
+    @Id
     private Integer id;
     private String name;
-    private Character starRaiting;
+    private Integer Raiting;
     private Double reviewScore;
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    private Category category;
+    private Kabnet kabnet;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Managment managment;

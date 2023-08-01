@@ -1,7 +1,6 @@
 package Rahim.faridKurs.service;
 
 import Rahim.faridKurs.dto.ManagmentRequest;
-import Rahim.faridKurs.entity.Category;
 import Rahim.faridKurs.entity.Managment;
 
 import java.util.List;

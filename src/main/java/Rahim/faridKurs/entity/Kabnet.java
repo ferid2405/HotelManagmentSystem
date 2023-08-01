@@ -8,10 +8,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+@AllArgsConstructor//adi kabnet olacaq
 @NoArgsConstructor
-@Entity(name = "Category")
-public class Category {
+@Entity(name = "Kabnet")
+public class Kabnet {
     @GeneratedValue
     @Id
     private Integer id;
