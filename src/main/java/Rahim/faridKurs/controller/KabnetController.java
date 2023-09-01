@@ -1,7 +1,6 @@
 package Rahim.faridKurs.controller;
 
 import Rahim.faridKurs.entity.Kabnet;
-import Rahim.faridKurs.entity.Managment;
 import Rahim.faridKurs.service.KabnetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

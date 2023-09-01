@@ -1,15 +1,19 @@
 package Rahim.faridKurs.security;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
 public class MyUserDetails implements UserDetails {
-   public MyUserDetails(User user) {
+    private final String email;
 
-}
+    private final String password;
+
+    public MyUserDetails(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -18,12 +22,12 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return email;
     }
 
     @Override

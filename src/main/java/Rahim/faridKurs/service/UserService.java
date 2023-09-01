@@ -1,8 +1,6 @@
 package Rahim.faridKurs.service;
 
-import Rahim.faridKurs.dto.ManagmentRequest;
 import Rahim.faridKurs.dto.UserRequest;
-import Rahim.faridKurs.entity.Managment;
 import Rahim.faridKurs.entity.User;
 
 

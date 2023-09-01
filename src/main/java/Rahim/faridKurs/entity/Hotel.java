@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity(name = "Hotel")
 public class Hotel {
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     private String name;
@@ -20,9 +20,7 @@ public class Hotel {
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Kabnet kabnet;
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "id")
-    private Managment managment;
+
 
 
 }
